@@ -1,29 +1,268 @@
 <template>
   <div>
-
     <particles />
     <div style="position: relative">
+
       <Menubar :model="items"></Menubar>
+
       <div style="text-align: center">
+        <Avatar image="src/assets/shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
+        <br>
+        <span style="font-size: 40px">👋</span>
         <h1><span style="font-weight: 900">Hello, I'm Shaugn. </span></h1>
         <br>
         <h1><span style="font-weight:400">I'm an aspiring software engineer currently studying at the</span> <span style="font-weight: 900">National University of Singapore.</span></h1>
+        <br><br>
+        <Button severity="secondary" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
+        <br><br>
+        <Divider layout="vertical" style="height: 100px;" />
+
+        <div class="projects" style="margin: 0 auto; width: 50%">
+          <h2>My Projects</h2>
+
+          <Card style="overflow: hidden">
+            <template #header>
+              <div style="margin-top: 10px">
+                <Image src="src/assets/linerlytica-table.png" width="800px"></Image>
+              </div>
+            </template>
+            <template #title>
+              <h2>Container Ship Data Scraper</h2>
+            </template>
+            <template #subtitle>
+              <div>
+                Made With: &nbsp;
+                <Icon style="vertical-align: middle;" icon="logos:python" width="2em" height="2em" /> &nbsp;
+                <Icon style="vertical-align: middle;" icon="logos:selenium" width="2em" height="2em" /> &nbsp;
+                <Image style="vertical-align: middle" src="src/assets/beautiful-soup.svg" height="48" />
+              </div>
+            </template>
+            <template #content>
+              Web scraper app to obtain cargo, maintenance, engine and location data regarding 20,000+ container ships. <br> Created for shipping data analysis company <a href="https://www.linerlytica.com/about" target="_blank">Linerlytica</a>. <br>Made with Python, Selenium and Beautiful Soup.
+            </template>
+            <template #footer>
+              <Button style="margin-top: 10px;" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187/vessel-data-scraper')"><i class="pi pi-github" /><strong>Project</strong></Button>
+            </template>
+          </Card>
+
+          <br>
+
+          <Card style="overflow: hidden">
+            <template #header>
+              <div style="margin-top: 10px">
+                <Image src="src/assets/telegram-bot2.png"></Image>
+              </div>
+            </template>
+            <template #title>
+              <h2>BTO Flat Tracker Telegram Bot</h2>
+            </template>
+            <template #subtitle>
+              Made With: &nbsp;
+              <Icon style="vertical-align: middle;" icon="logos:python" height="2em" /> &nbsp;
+              <Icon style="vertical-align: middle;" icon="logos:telegram" width="2em" height="2em" /> &nbsp;
+              <Icon style="vertical-align: middle;" icon="devicon:mongodb-wordmark" width="3em" height="3em" /> &nbsp;
+              <Icon style="vertical-align: middle;" icon="skill-icons:docker" width="2em" height="2em" /> &nbsp;
+              <Icon style="vertical-align: middle;" icon="logos:aws" width="2em" height="2em" /> &nbsp;
+            </template>
+            <template #content>
+              <div style="margin-top: 10px">
+                Telegram chatbot to monitor HDB flat uptake for Bedok South Blossoms BTO launched in May 2023.
+                <br>
+                Allows users to keep a watchlist of flats and notify users whenever a HDB flat is taken.
+                <br>
+                Built using Python, MongoDB, Docker and deployed on AWS.
+              </div>
+            </template>
+            <template #footer>
+              <Button style="margin-top: 10px" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187/BSB-BTO-Tracker')"><i class="pi pi-github"></i><strong>Project</strong></Button>
+            </template>
+          </Card>
+        </div>
+        <br>
+
+        <Divider layout="vertical" style="height: 100px;" />
+
+        <div class="skills">
+          <h2>My Skills</h2>
+
+          <div style="display: flex; justify-content: center; gap: 2em;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <Icon icon="logos:javascript" width="3em" height="3em" />
+              <h4>Javascript</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:typescript-icon" width="3em" height="3em" />
+              <h4>TypeScript</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:vue" width="3em" height="3em" />
+              <h4>Vue.js</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:nodejs-icon" width="3em" height="3em" />
+              <h4>Node.js</h4>
+            </div>
+
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 2em;">
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:python" width="3em" height="3em" />
+              <h4>Python</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:java" width="3em" height="3em" />
+              <h4>Java</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:spring-icon" width="3em" height="3em" />
+              <h4>Spring Boot</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="skill-icons:html" width="3em" height="3em" />
+              <h4>HTML</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="skill-icons:css" width="3em" height="3em" />
+              <h4>CSS</h4>
+            </div>
+
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 2em;">
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:postgresql" width="3em" height="3em" />
+              <h4>PostgreSQL</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:mysql" width="3em" height="3em" />
+              <h4>MySQL</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="devicon:mongodb" width="3em" height="3em" />
+              <h4>MongoDB</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="skill-icons:docker" width="3em" height="3em" />
+              <h4>Docker</h4>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <Icon icon="logos:aws" width="3em" height="3em" />
+              <h4>AWS</h4>
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+
+        <Divider layout="vertical" style="height: 100px;" />
+
+        <div class="experience" style="width: 50%; margin: 0 auto">
+          <h2>My Experience</h2>
+          <Timeline :value="timeline" align="alternate">
+
+            <template #marker>
+              <Avatar icon="pi pi-briefcase" shape="circle" />
+            </template>
+
+            <template #opposite="slotProps">
+              <div style="padding-top: 5px">
+                <strong>{{ slotProps.item.duration }}</strong>
+              </div>
+
+            </template>
+
+            <template #content="slotProps">
+              <div style="margin-bottom: 20px">
+                <Card style="border-radius: 3px; border: 4px black solid;">
+                  <template #title>
+                    {{ slotProps.item.title }}
+                  </template>
+
+                  <template #subtitle>
+                    {{ slotProps.item.company }}
+                  </template>
+
+                  <template #content>
+                    <ul>
+                      <li v-for="content in slotProps.item.content" style="margin-bottom: 1em">
+                        {{content}}
+                      </li>
+                    </ul>
+
+                  </template>
+
+                  <template #footer>
+                    {{ slotProps.item.footer }}
+                  </template>
+                </Card>
+              </div>
+
+            </template>
+          </Timeline>
+        </div>
+
+        <br>
+
+        <Divider layout="vertical" style="height: 100px;" />
+
+        <div class="education">
+          <h2>My Education</h2>
+          <Card style="width: 20%; margin: 0 auto;">
+            <template #header>
+              <div style="margin-top: 10px">
+                <Image src="src/assets/nus.png" height="100" />
+              </div>
+
+
+            </template>
+            <template #title>
+              Bachelor of Computing in Computer Science
+            </template>
+
+
+
+            <template #content>
+              National University of Singapore
+              <br>
+              Graduating in May 2025
+              <br>
+              GPA:&nbsp; 4.2 / 5.0
+              <br>
+              Focus Area: Database Systems
+            </template>
+
+          </Card>
+
+        </div>
+
       </div>
-
     </div>
-
-
-
   </div>
 </template>
-
 
 <script>
 import Particles from "@/components/Particles.vue";
 import Menubar from "primevue/menubar";
+import { Icon } from "@iconify/vue";
 
 export default {
   components: {
+    Icon,
     Particles,
     Menubar
   },
@@ -31,14 +270,30 @@ export default {
     return {
       items: [
         { label: 'Home' },
-        { label: 'Education' },
         { label: 'Experience' },
-        { label: 'Projects' }
+        { label: 'Projects' },
+        { label: 'Education' },
+      ],
+      timeline: [
+        { title: 'Back-end Developer Intern', duration: 'May 2023 - Aug 2023', company: 'MCC Singapore',
+          content: ['Worked with the development team to extend functionalities of back-end for an e-commerce website specializing in furniture and home appliances.'],
+          footer: 'Tech stacks used: Spring Boot, MySQL'
+        },
+        { title: 'Full-stack Developer Intern', duration: 'May 2024 - Nov 2024', company: 'Grey & Sanders',
+          content: [
+              "Contributed to the development of internal web app to manage company's sales, inventory, incoming shipments and deliveries.",
+            "Implemented dashboards that displays the current year's sales performance compared to previous years.",
+
+          ],
+          footer: 'Tech stacks used: Vue.js, Node.js, PostgreSQL'
+        }
       ]
     }
   },
   methods: {
-
+    redirectToLink(link) {
+      window.open(link, '_blank');
+    }
   }
 }
 
@@ -49,8 +304,9 @@ export default {
   justify-content: flex-end;
   border: none !important;
   background: transparent !important;
-
 }
+
+
 
 
 

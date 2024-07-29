@@ -11,10 +11,6 @@
                     fpsLimit: 120,
                     interactivity: {
                         events: {
-                            onClick: {
-                                enable: true,
-                                mode: 'push'
-                            },
                             onHover: {
                                 enable: true,
                                 mode: 'repulse'
@@ -71,7 +67,6 @@
                             value: { min: 1, max: 5 }
                         }
                     },
-                    detectRetina: true
                 }"
   />
 

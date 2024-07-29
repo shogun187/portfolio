@@ -9,12 +9,14 @@ import Particles from "@tsparticles/vue3"
 import { loadSlim } from "@tsparticles/slim"
 
 
+
 const app = createApp(App)
 app.use(PrimeVue, {
     theme: {
         preset: Aura
     }
 });
+
 
 app.use(Particles, {
     init: async engine => {
