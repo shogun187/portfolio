@@ -3,7 +3,8 @@
     <particles />
     <div style="position: relative">
 
-      <Menubar :model="items"></Menubar>
+      <Menubar :model="items" style="font-weight: 700; font-size: 20px;"></Menubar>
+      <br>
 
       <div style="text-align: center">
         <Avatar image="src/assets/shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
@@ -188,7 +189,7 @@
 
             <template #content="slotProps">
               <div style="margin-bottom: 20px">
-                <Card style="border-radius: 3px; border: 4px black solid;">
+                <Card style="border-radius: 3px; border: 2px black solid;">
                   <template #title>
                     {{ slotProps.item.title }}
                   </template>
@@ -300,8 +301,7 @@ export default {
 </script>
 <style scoped>
 .p-menubar {
-  display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   border: none !important;
   background: transparent !important;
 }
