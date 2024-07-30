@@ -7,7 +7,7 @@
       <br>
 
       <div style="text-align: center">
-        <Avatar image="src/assets/shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
+        <Avatar image="/shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
         <br>
         <span style="font-size: 40px">👋</span>
         <h1><span style="font-weight: 900">Hello, I'm Shaugn. </span></h1>
@@ -24,7 +24,7 @@
           <Card style="overflow: hidden">
             <template #header>
               <div style="margin-top: 10px">
-                <Image src="src/assets/linerlytica-table.png" width="800px"></Image>
+                <Image src="/linerlytica-table.png" width="800px"></Image>
               </div>
             </template>
             <template #title>
@@ -51,7 +51,7 @@
           <Card style="overflow: hidden">
             <template #header>
               <div style="margin-top: 10px">
-                <Image src="src/assets/telegram-bot2.png"></Image>
+                <Image src="/telegram-bot2.png"></Image>
               </div>
             </template>
             <template #title>
@@ -226,7 +226,7 @@
           <Card style="width: 20%; margin: 0 auto;">
             <template #header>
               <div style="margin-top: 10px">
-                <Image src="src/assets/nus.png" height="100" />
+                <Image src="/nus.png" height="100" />
               </div>
 
 
