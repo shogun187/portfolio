@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": ".",
+  "homepage": "https://shogun187.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
