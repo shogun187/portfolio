@@ -7,18 +7,22 @@
       <br>
 
       <div style="text-align: center;">
-        <Avatar image="./shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
-        <br>
-        <span style="font-size: 40px">👋</span>
-        <h1><span style="font-weight: 900">Hello, I'm Shaugn. </span></h1>
-        <br>
-        <h1><span style="font-weight:400">I'm an aspiring software engineer currently studying at the</span> <span style="font-weight: 900">National University of Singapore.</span></h1>
-        <br><br>
-        <Button severity="secondary" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
-        <br><br>
+        <div class="introduction" v-motion-fade>
+          <Avatar image="./shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
+          <br>
+          <span style="font-size: 40px">👋</span>
+          <h1><span style="font-weight: 900">Hello, I'm Shaugn. </span></h1>
+          <br>
+          <h1><span style="font-weight:400">I'm an aspiring software engineer currently studying at the</span> <span style="font-weight: 900">National University of Singapore.</span></h1>
+          <br><br>
+          <Button severity="secondary" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
+          <br><br>
+
+        </div>
+
         <Divider layout="vertical" style="height: 100px;" />
 
-        <div class="projects" id="projects-section" style="margin: 0 auto; width: 50%">
+        <div class="projects" id="projects-section" style="margin: 0 auto; width: 50%" v-motion-slide-visible-once-top >
           <h2>My Projects</h2>
 
           <Card class="card">
@@ -147,7 +151,7 @@
 
         <Divider layout="vertical" style="height: 100px;" />
 
-        <div class="skills" id="skills-section">
+        <div class="skills" id="skills-section" v-motion-slide-visible-left>
           <h2>My Skills</h2>
 
           <div style="display: flex; justify-content: center; gap: 2em;">
@@ -237,7 +241,7 @@
 
         <Divider layout="vertical" style="height: 100px;" />
 
-        <div class="experience" id="experience-section" style="width: 50%; margin: 0 auto">
+        <div class="experience" id="experience-section" style="width: 50%; margin: 0 auto" v-motion-slide-visible-top>
           <h2>My Experience</h2>
           <Timeline :value="timeline" align="alternate">
 
@@ -286,7 +290,7 @@
 
         <Divider layout="vertical" style="height: 100px;" />
 
-        <div class="education" id="education-section">
+        <div class="education" id="education-section" v-motion-slide-visible-left >
           <h2>My Education</h2>
           <Card class="card" style="width: 20%; margin: 0 auto;">
             <template #header>
@@ -303,12 +307,11 @@
 
 
             <template #content>
+              <br>
               National University of Singapore
-              <br>
+              <br><br>
               Graduating in May 2025
-              <br>
-              GPA:&nbsp; 4.2 / 5.0
-              <br>
+              <br><br>
               Focus Area: Database Systems
             </template>
 
@@ -338,18 +341,22 @@ export default {
       items: [
         { label: 'Home', command: () => document.getElementById('home-section').scrollIntoView({ behavior: 'smooth' }) },
         { label: 'Projects', command: () => document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' }) },
+        { label: 'Skills', command: () => document.getElementById('skills-section').scrollIntoView({ behavior: 'smooth' }) },
         { label: 'Experience', command: () => document.getElementById('experience-section').scrollIntoView({ behavior: 'smooth' }) },
         { label: 'Education', command: () => document.getElementById('education-section').scrollIntoView({ behavior: 'smooth' }) },
       ],
       timeline: [
         { title: 'Back-end Developer Intern', duration: 'May 2023 - Aug 2023', company: 'MCC Singapore',
-          content: ['Worked with the development team to extend functionalities of back-end for an e-commerce website specializing in furniture and home appliances.'],
-          footer: 'Tech stacks used: Spring Boot, MySQL'
+          content: [
+              'Worked with the development team to extend functionalities of back-end for an e-commerce website specializing in furniture and home appliances.',
+            'Automated testing and documentation processes using JUnit and Swagger, leading to increase in code coverage and streamlined API documentation'
+          ],
+          footer: 'Tech stacks used: Java, Spring Boot, MySQL'
         },
         { title: 'Full-stack Developer Intern', duration: 'May 2024 - Nov 2024', company: 'Grey & Sanders',
           content: [
               "Contributed to the development of internal web app to manage company's sales, inventory, incoming shipments and deliveries.",
-            "Implemented dashboards that displays the current year's sales performance compared to previous years.",
+              'Created custom dashboards for in-depth analysis of top-performing products, inventory management, and sales performance across different time periods.'
 
           ],
           footer: 'Tech stacks used: Vue.js, Node.js, PostgreSQL'

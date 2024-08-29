@@ -7,15 +7,21 @@ import Aura from '@primevue/themes/aura';
 import 'primeicons/primeicons.css'
 import Particles from "@tsparticles/vue3"
 import { loadSlim } from "@tsparticles/slim"
-
+import AnimateOnScroll from 'primevue/animateonscroll';
+import { MotionPlugin } from "@vueuse/motion";
 
 
 const app = createApp(App)
+
+app.directive('animateonscroll', AnimateOnScroll);
+
 app.use(PrimeVue, {
     theme: {
         preset: Aura
     }
 });
+
+app.use(MotionPlugin)
 
 
 app.use(Particles, {
@@ -24,6 +30,6 @@ app.use(Particles, {
     }
 })
 
+
+
 app.mount('#app')
-
-
