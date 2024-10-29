@@ -8,14 +8,18 @@
 
       <div style="text-align: center;">
         <div class="introduction" v-motion-fade>
-          <Avatar image="./shaugn.jpg" shape="circle" style="height: 150px; width: 150px"></Avatar>
+          <Avatar image="./shaugn.jpg" shape="circle" size="large" style="height: 150px; width: 150px"></Avatar>
           <br>
           <span style="font-size: 40px">👋</span>
           <h1><span style="font-weight: 900">Hello, I'm Shaugn. </span></h1>
           <br>
           <h1><span style="font-weight:400">I'm an aspiring software engineer currently studying at the</span> <span style="font-weight: 900">National University of Singapore.</span></h1>
           <br><br>
-          <Button severity="secondary" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
+          <div style="display:flex; justify-content: center; gap: 60px">
+            <Button severity="secondary" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
+            <Button severity="contrast" rounded size="large" @click="redirectToLink('https://www.linkedin.com/in/shaugn-tan-b50238147/')"><strong>LinkedIn</strong> <i class="pi pi-linkedin"></i></Button>
+          </div>
+
           <br><br>
 
         </div>
@@ -259,6 +263,13 @@
             <template #content="slotProps">
               <div style="margin-bottom: 20px">
                 <Card class="card" style="border-radius: 3px; border: 2px black solid;">
+                  <template #header>
+                    <div style="display: flex; justify-content: center; margin-top: 10px">
+                      <Image :src="slotProps.item.image"/>
+                    </div>
+
+                  </template>
+
                   <template #title>
                     {{ slotProps.item.title }}
                   </template>
@@ -346,21 +357,27 @@ export default {
         { label: 'Education', command: () => document.getElementById('education-section').scrollIntoView({ behavior: 'smooth' }) },
       ],
       timeline: [
-        { title: 'Back-end Developer Intern', duration: 'May 2023 - Aug 2023', company: 'MCC Singapore',
+        {
+          title: 'Full-stack Developer Intern', duration: 'May 2024 - Dec 2024', company: 'Grey & Sanders',
+          image: "./grey-and-sanders.jpeg",
           content: [
-              'Worked with the development team to extend functionalities of back-end for an e-commerce website specializing in furniture and home appliances.',
+              "Contributed to the development of internal web app to manage company's sales, inventory, incoming shipments and deliveries.",
+              'Created custom dashboards for in-depth analysis of top-performing products, inventory management, and sales performance across different time periods.',
+              "Worked with development team in implementing route planning algorithm using Google Maps API to optimize delivery routes and predictable delivery timings."
+
+
+          ],
+          footer: 'Tech stacks used: Vue.js, Node.js, PostgreSQL'
+        },
+        {
+          title: 'Back-end Developer Intern', duration: 'May 2023 - Aug 2023', company: 'MCC Singapore',
+          image: "./mcc.jpeg",
+          content: [
+            'Worked with the development team to extend functionalities of back-end for an e-commerce website specializing in furniture and home appliances.',
             'Automated testing and documentation processes using JUnit and Swagger, leading to increase in code coverage and streamlined API documentation'
           ],
           footer: 'Tech stacks used: Java, Spring Boot, MySQL'
         },
-        { title: 'Full-stack Developer Intern', duration: 'May 2024 - Nov 2024', company: 'Grey & Sanders',
-          content: [
-              "Contributed to the development of internal web app to manage company's sales, inventory, incoming shipments and deliveries.",
-              'Created custom dashboards for in-depth analysis of top-performing products, inventory management, and sales performance across different time periods.'
-
-          ],
-          footer: 'Tech stacks used: Vue.js, Node.js, PostgreSQL'
-        }
       ]
     }
   },
@@ -389,7 +406,7 @@ export default {
 }
 
 .card {
-  //color: black !important;
+  color: black !important;
   overflow: hidden
 }
 
