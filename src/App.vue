@@ -245,7 +245,7 @@
 
         <Divider layout="vertical" style="height: 100px;" />
 
-        <div class="experience" id="experience-section" style="width: 50%; margin: 0 auto" v-motion-slide-visible-top>
+        <div class="experience" id="experience-section" style="width: 50%; margin: 0 auto" v-motion-slide-visible-right>
           <h2>My Experience</h2>
           <Timeline :value="timeline" align="alternate">
 
