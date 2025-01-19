@@ -11,15 +11,12 @@ html, body {
 
 
 :root {
-    --p-menubar-item-focus-background: var(--p-slate-500) !important;
-    --p-card-background: #d9d9d9 !important;
     color-scheme: light only !important;
-    --p-menubar-item-color: #5a5a5a !important;
 }
 
 @media (prefers-color-scheme: dark) {
     html, body {
-        color: black !important; /* White text for dark mode */
+        color: black !important;
     }
 }
 
