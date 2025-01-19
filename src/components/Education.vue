@@ -6,7 +6,7 @@ export default {
 <template>
   <div id="education-section" v-motion-slide-visible-left>
     <h2>My Education</h2>
-    <Card class="card" style="width: 20%; margin: 0 auto;">
+    <Card class="card" style="width: 25%; margin: 0 auto;">
       <template #header>
         <div style="margin-top: 10px">
           <Image height="100" src="./nus.png"/>
