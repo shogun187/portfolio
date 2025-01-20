@@ -132,7 +132,7 @@
         </vue-slide>
 
         <template #addons>
-          <vue-navigation style="padding-left: 23%; padding-right:23%; "/>
+          <vue-navigation/>
           <vue-pagination />
         </template>
 
@@ -152,24 +152,10 @@ export default {
     return {
       carouselConfig: {
         height: 800,
-        itemsToShow: 2,
-        gap: 100,
+        itemsToShow: 1,
+        gap: 10,
         wrapAround: true,
-        breakpoints: {
-          1200: {
-            itemsToShow: 2,
-            gap: 30,
-          },
-          800: {
-            itemsToShow: 1,
-            gap: 20,
-          },
-          500: {
-            itemsToShow: 1,
-            gap: 10,
-          },
         }
-      }
     }
   },
   components: { Icon , vueCarousel, vueSlide, vuePagination, vueNavigation },
@@ -185,7 +171,6 @@ export default {
 .card {
   color: black !important;
   overflow: hidden;
-  width: 100%;
-  --p-card-background: #d9d9d9 !important
+  --p-card-background: #d9d9d9 !important;
 }
 </style>

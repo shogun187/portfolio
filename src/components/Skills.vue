@@ -1,11 +1,3 @@
-<script>
-import {Icon} from "@iconify/vue";
-
-export default {
-  components: {Icon}
-}
-</script>
-
 <template>
   <div id="skills-section" v-motion-slide-visible-left>
     <h2>My Skills</h2>
@@ -89,6 +81,14 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+import {Icon} from "@iconify/vue";
+
+export default {
+  components: {Icon}
+}
+</script>
 
 <style scoped>
 #skills-section {
