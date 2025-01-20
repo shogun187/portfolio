@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import {VueWriter} from 'vue-writer'
 import Typewriter from '@btjspr/vue-typewriter';
 
 export default {

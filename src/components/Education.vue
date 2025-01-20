@@ -11,14 +11,11 @@ export default {
         <div style="margin-top: 10px">
           <Image height="100" src="./nus.png"/>
         </div>
-
-
       </template>
       <template #title>
         Bachelor of Computing in Computer Science
       </template>
-
-
+      
       <template #content>
         <br>
         National University of Singapore
