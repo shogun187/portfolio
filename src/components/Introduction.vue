@@ -23,7 +23,6 @@ import Typewriter from '@btjspr/vue-typewriter';
 
 export default {
   components: {
-    VueWriter,
     Typewriter
   },
   methods: {

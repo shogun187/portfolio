@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@btjspr/vue-typewriter": "^1.0.3",
     "@primevue/themes": "^4.0.0",
     "@tsparticles/slim": "^3.5.0",
     "@tsparticles/vue3": "^3.0.1",
