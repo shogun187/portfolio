@@ -26,7 +26,7 @@
                 Web scraper app to obtain cargo, maintenance, engine and location data regarding 20,000+ container ships. <br> Created for shipping data analysis company <a href="https://www.linerlytica.com/about" target="_blank">Linerlytica</a>. <br>Made with Python, Selenium and Beautiful Soup.
               </template>
               <template #footer>
-                <Button style="margin-top: 10px;" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187/vessel-data-scraper')"><i class="pi pi-github" /><strong>Project</strong></Button>
+                <Button class="project-button" rounded size="large" @click="redirectToLink('https://github.com/shogun187/vessel-data-scraper')"><i class="pi pi-github" /><strong>Project</strong></Button>
               </template>
             </Card>
           </div>
@@ -61,7 +61,7 @@
                 </div>
               </template>
               <template #footer>
-                <Button style="margin-top: 10px" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187/BSB-BTO-Tracker')"><i class="pi pi-github"></i><strong>Project</strong></Button>
+                <Button class="project-button" rounded size="large" @click="redirectToLink('https://github.com/shogun187/BSB-BTO-Tracker')"><i class="pi pi-github"></i><strong>Project</strong></Button>
               </template>
             </Card>
           </div>
@@ -94,7 +94,7 @@
                 </div>
               </template>
               <template #footer>
-                <Button style="margin-top: 10px" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187/chat-app/tree/main')"><i class="pi pi-github"></i><strong>Project</strong></Button>
+                <Button class="project-button" rounded size="large" @click="redirectToLink('https://github.com/shogun187/chat-app/tree/main')"><i class="pi pi-github"></i><strong>Project</strong></Button>
               </template>
             </Card>
           </div>
@@ -125,7 +125,7 @@
                 </div>
               </template>
               <template #footer>
-                <Button style="margin-top: 10px" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187/tp')"><i class="pi pi-github"></i><strong>Project</strong></Button>
+                <Button class="project-button" rounded size="large" @click="redirectToLink('https://github.com/shogun187/tp')"><i class="pi pi-github"></i><strong>Project</strong></Button>
               </template>
             </Card>
           </div>
@@ -155,6 +155,7 @@ export default {
         itemsToShow: 1,
         gap: 10,
         wrapAround: true,
+        transition: 400
         }
     }
   },
@@ -172,5 +173,16 @@ export default {
   color: black !important;
   overflow: hidden;
   --p-card-background: #d9d9d9 !important;
+}
+
+.project-button {
+  background-color: #f5f5f6;
+  color: black !important;
+  border: none !important;
+  margin-top: 10px;
+}
+
+.project-button:hover {
+  background-color: #ececec !important;
 }
 </style>

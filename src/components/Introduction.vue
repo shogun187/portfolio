@@ -9,8 +9,8 @@
     <h1><span style="font-weight:400">I'm an aspiring software engineer currently studying at the</span> <span style="font-weight: 900">National University of Singapore.</span></h1>
     <br><br>
     <div class="button-container">
-      <Button severity="secondary" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
-      <Button class="linkedin-button" style="" rounded size="large" @click="redirectToLink('https://www.linkedin.com/in/shaugn-tan-b50238147/')"><strong>LinkedIn</strong> <i class="pi pi-linkedin"></i></Button>
+      <Button class="github-button" severity="contrast" rounded size="large" @click="redirectToLink('https://github.com/shogun187')"><strong>GitHub</strong> <i class="pi pi-github"></i></Button>
+      <Button class="linkedin-button" rounded size="large" @click="redirectToLink('https://www.linkedin.com/in/shaugn-tan-b50238147/')"><strong>LinkedIn</strong> <i class="pi pi-linkedin"></i></Button>
     </div>
 
     <br><br>
@@ -41,14 +41,25 @@ export default {
   margin: 0 auto;
 }
 
-.linkedin-button {
-  background-color: #007ebb !important;
+.github-button {
+  background-color: #101424 !important;
+  color: #ffffff;
   border: none !important;
+}
+
+.github-button:hover {
+  color: #a2a2a2 !important;
+}
+
+.linkedin-button {
+  background-color: #007ebb;
+  border: none !important;
+  color: #ffffff;
 }
 
 .linkedin-button:hover {
   background-color: #005f99 !important;
-  border: none;
+  color: #18181b !important;
 }
 
 .button-container {

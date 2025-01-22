@@ -1,7 +1,7 @@
 <template>
   <div id="experience-section" v-motion-slide-visible-right>
     <h2>My Experience</h2>
-    <Timeline :value="timeline" align="alternate">
+    <Timeline :value="timeline" align="alternate" class="timeline">
 
       <template #marker>
         <Avatar icon="pi pi-briefcase" shape="circle" style="background-color: #d9d9d9 !important"/>
@@ -99,11 +99,14 @@ export default {
 }
 
 .card {
-  color: black !important;
+  color: black;
   overflow: hidden;
-  width: 100%;
-  --p-card-background: #d9d9d9 !important;
+  --p-card-background: #d9d9d9;
   border: 1px black solid;
   text-align: left;
+}
+
+.timeline {
+  --p-timeline-event-connector-color: black;
 }
 </style>

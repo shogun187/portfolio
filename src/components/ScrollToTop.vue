@@ -9,8 +9,13 @@ export default {
 
 <style scoped>
 .p-scrolltop {
-  background: #8c8c8c !important;
+  background: #8c8c8c;
   border: none !important;
+  color: black !important;
+}
+
+.p-scrolltop:hover {
+  background: #5a5a5a !important;
 }
 
 </style>
