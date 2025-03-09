@@ -1,15 +1,15 @@
 <script>
-export default {
-}
+export default {}
 </script>
 
 <template>
-  <Divider layout="vertical" class="divider"/>
+	<Divider class="divider" layout="vertical" />
 </template>
 
 <style scoped>
 .divider {
-  --p-divider-border-color: black;
-  height: 100px;
+	height: 150px;
+	border-color: black;
+	margin-top: 2rem;
 }
 </style>

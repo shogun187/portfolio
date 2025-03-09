@@ -9,13 +9,13 @@ export default {
     <Card class="card" style="width: 25%; margin: 0 auto;">
       <template #header>
         <div style="margin-top: 10px">
-          <Image height="100" src="./nus.png"/>
+          <Image height="100" src="./nus.png" />
         </div>
       </template>
       <template #title>
         Bachelor of Computing in Computer Science
       </template>
-      
+
       <template #content>
         <br>
         National University of Singapore
@@ -33,9 +33,8 @@ export default {
 
 <style scoped>
 .card {
-  color: black !important;
+  color: black;
   overflow: hidden;
-  width: 100%;
-  --p-card-background: #d9d9d9 !important;
+  background: #d9d9d9;
 }
 </style>

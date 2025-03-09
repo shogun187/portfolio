@@ -11,7 +11,8 @@ import { MotionPlugin } from "@vueuse/motion";
 const app = createApp(App)
 app.use(PrimeVue, {
     theme: {
-        preset: Aura
+        preset: Aura,
+        darkModeSelector: false
     }
 });
 app.use(MotionPlugin)

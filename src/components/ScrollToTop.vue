@@ -11,7 +11,7 @@ export default {
 .p-scrolltop {
   background: #8c8c8c;
   border: none !important;
-  color: black !important;
+  color: black;
 }
 
 .p-scrolltop:hover {

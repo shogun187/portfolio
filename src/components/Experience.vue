@@ -4,7 +4,7 @@
     <Timeline :value="timeline" align="alternate" class="timeline">
 
       <template #marker>
-        <Avatar icon="pi pi-briefcase" shape="circle" style="background-color: #d9d9d9 !important"/>
+        <Avatar icon="pi pi-briefcase" shape="circle" style="background-color: #d9d9d9" />
       </template>
 
       <template #opposite="slotProps">
@@ -19,7 +19,7 @@
           <Card class="card">
             <template #header>
               <div style="display: flex; justify-content: center; margin-top: 10px">
-                <Image :src="slotProps.item.image" width="110" height="90"/>
+                <Image :src="slotProps.item.image" width="110" height="90" />
               </div>
 
             </template>
@@ -55,16 +55,14 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       timeline: [
         {
-          title: 'Software Engineer Intern', duration: 'Jan 2025 - Present', company: 'KPMG Singapore',
+          title: 'Software Engineer Intern', duration: 'Jan 2025 - Feb 2025', company: 'KPMG Singapore',
           image: "./kpmg.svg",
           content: [
             "Design and implement enterprise applications to meet business needs."
-
-
           ],
           footer: 'Tech stacks used: Node.js, .NET, React'
         },
@@ -73,8 +71,6 @@ export default {
           image: "./grey-and-sanders.jpeg",
           content: [
             "Contributed to the development of internal web app to manage company's sales, inventory, incoming shipments and deliveries."
-
-
           ],
           footer: 'Tech stacks used: Vue.js, Node.js, PostgreSQL'
         },
@@ -108,5 +104,9 @@ export default {
 
 .timeline {
   --p-timeline-event-connector-color: black;
+}
+
+#experience-section {
+	scroll-margin-top: 100px;
 }
 </style>
