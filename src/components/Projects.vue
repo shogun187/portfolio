@@ -1,5 +1,5 @@
 <template>
-	<div id="projects-section" v-motion-slide-visible-once-top>
+	<div id="projects-section" v-motion-slide-visible-once-top style="width: 80%; margin: 0 auto">
 		<h2>My Projects</h2>
 		<div class="carousel-container">
 			<vue-carousel v-bind="carouselConfig">
@@ -139,7 +139,6 @@
 			</vue-carousel>
 		</div>
 	</div>
-
 </template>
 
 <script>
@@ -151,9 +150,15 @@ export default {
 	data() {
 		return {
 			carouselConfig: {
-				height: 800,
+				breakpoints: {
+					1920: {
+						itemsToShow: 2,
+						gap: 400
+					}
+				},
+				height: 850,
 				itemsToShow: 1,
-				gap: 1000,
+				gap: 0,
 				wrapAround: true,
 				transition: 400
 			}
@@ -171,8 +176,9 @@ export default {
 <style scoped>
 .card {
 	color: black;
-	overflow: hidden;
 	--p-card-background: #d9d9d9;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .project-button {
@@ -185,5 +191,6 @@ export default {
 
 #projects-section {
 	scroll-margin-top: 100px;
+	overflow-x: hidden;
 }
 </style>
