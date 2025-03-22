@@ -2,41 +2,105 @@
 export default {
 	data() {
 		return {
-			items: [
+			activeSection: '', // holds the id of the section currently in view
+		}
+	},
+	methods: {
+		scrollToSection(id) {
+			this.$nextTick(() => {
+				document.getElementById(id).scrollIntoView();
+			});
+		},
+		handleIntersections(entries) {
+			// Loop through each observed entry
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// When a section is intersecting (visible), update activeSection
+					this.activeSection = entry.target.id;
+				}
+			});
+		}
+	},
+	computed: {
+		items() {
+			const returnVal = [
 				{
 					label: 'Home',
-					command: () => this.$nextTick(() => document.getElementById('home-section').scrollIntoView())
+					id: 'home-section',
+					command: () => {
+						this.scrollToSection('home-section')
+						this.$nextTick(() => document.activeElement.blur());
+					},
+					class: this.activeSection === 'home-section' ? 'active-menu-item' : ''
 				},
 				{
 					label: 'Projects',
-					command: () => this.$nextTick(() => document.getElementById('projects-section').scrollIntoView())
+					id: 'projects-section',
+					command: () => {
+						this.scrollToSection('projects-section')
+						this.$nextTick(() => document.activeElement.blur())
+					},
+					class: this.activeSection === 'projects-section' ? 'active-menu-item' : ''
 				},
 				{
 					label: 'Skills',
-					command: () => this.$nextTick(() => document.getElementById('skills-section').scrollIntoView())
+					id: 'skills-section',
+					command: () => {
+						this.scrollToSection('skills-section')
+						this.$nextTick(() => document.activeElement.blur())
+					},
+					class: this.activeSection === 'skills-section' ? 'active-menu-item' : ''
 				},
 				{
 					label: 'Experience',
-					command: () => this.$nextTick(() => document.getElementById('experience-section').scrollIntoView())
+					id: 'experience-section',
+					command: () => {
+						this.scrollToSection('experience-section')
+						this.$nextTick(() => document.activeElement.blur())
+					},
+					class: this.activeSection === 'experience-section' ? 'active-menu-item' : ''
 				},
 				{
 					label: 'Education',
-					command: () => this.$nextTick(() => document.getElementById('education-section').scrollIntoView())
+					id: 'education-section',
+					command: () => {
+						this.scrollToSection('education-section')
+						this.$nextTick(() => document.activeElement.blur())
+					},
+					class: this.activeSection === 'education-section' ? 'active-menu-item' : ''
 				},
 			]
+			return returnVal
 		}
+	},
+	mounted() {
+		// Set up IntersectionObserver options
+		const options = {
+			root: null,       // use the viewport as the container
+			threshold: 0.4,    // adjust this value to determine when a section is "active"
+		};
+		// Create the observer and start observing each section
+		const observer = new IntersectionObserver(this.handleIntersections, options);
+		this.items.forEach(item => {
+			const element = document.getElementById(item.id);
+			if (element) {
+				observer.observe(element);
+			}
+		});
 	}
 }
 </script>
 
 <template>
-	<Menubar :model="items" />
+	<Menubar :model="items" class="menubar" />
 </template>
 
 <style scoped>
-.p-menubar {
+.menubar {
 	--p-menubar-item-color: #5a5a5a;
-	--p-menubar-item-focus-background: var(--p-slate-500);
+	--p-menubar-item-focus-background: transparent;
+	--p-menubar-item-border-radius: 50px;
+	--p-menubar-item-focus-color: white;
 	background: #9EAAA1;
 	border-color: transparent;
 	border-radius: 50px;
@@ -48,6 +112,17 @@ export default {
 	position: sticky;
 	top: 5px;
 	z-index: 1000;
+}
+
+:deep(.p-menuitem-link:not(.active-menu-item):focus),
+:deep(.p-menuitem-link:not(.active-menu-item):hover) {
+	color: #5a5a5a !important;
+}
+
+:deep(.active-menu-item) {
+	background: var(--p-slate-500);
+	--p-menubar-item-color: white;
+	border-radius: 50px;
 }
 
 </style>

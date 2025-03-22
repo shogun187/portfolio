@@ -7,8 +7,10 @@ import 'primeicons/primeicons.css'
 import Particles from "@tsparticles/vue3"
 import { loadSlim } from "@tsparticles/slim"
 import { MotionPlugin } from "@vueuse/motion";
+import Tooltip from 'primevue/tooltip';
 
 const app = createApp(App)
+app.directive('tooltip', Tooltip);
 app.use(PrimeVue, {
     theme: {
         preset: Aura,

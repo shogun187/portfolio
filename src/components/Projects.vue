@@ -19,7 +19,7 @@
 									Made With: &nbsp;
 									<Icon height="2em" icon="logos:python" style="vertical-align: middle;" width="2em" /> &nbsp;
 									<Icon height="2em" icon="logos:selenium" style="vertical-align: middle;" width="2em" /> &nbsp;
-									<Image height="48" src="./beautiful-soup.svg" style="vertical-align: middle" />
+									<Image height="32" src="./beautiful-soup.svg" style="vertical-align: top"  />
 								</div>
 							</template>
 							<template #content>
@@ -153,7 +153,7 @@ export default {
 			carouselConfig: {
 				height: 800,
 				itemsToShow: 1,
-				gap: 10,
+				gap: 1000,
 				wrapAround: true,
 				transition: 400
 			}

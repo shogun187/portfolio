@@ -1,5 +1,5 @@
 <template>
-	<div id="home-section">
+	<div>
 		<particles />
 
 		<div style="text-align: center">

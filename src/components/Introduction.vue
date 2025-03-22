@@ -1,5 +1,5 @@
 <template>
-	<div v-motion-fade class="introduction" style="row-gap: 2em">
+	<div v-motion-fade class="introduction" style="row-gap: 2em" id="home-section">
 		<Avatar class="avatar" image="./shaugn.jpg" shape="circle" size="large" style="height: 150px; width: 150px" />
 		<span style="font-size: 50px">👋</span>
 		<Typewriter :delay="0" :loop="false" :speed="90" :textStyles="{ fontSize: '2em', 'font-weight': 900 }">Hello, I'm Shaugn.</Typewriter>
@@ -54,5 +54,9 @@ export default {
 	display: flex;
 	justify-content: center;
 	gap: 60px;
+}
+
+#home-section {
+	scroll-margin-top: 100px;
 }
 </style>
