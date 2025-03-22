@@ -102,8 +102,15 @@ export default {
 	grid-template-columns: repeat(5, 1fr); /* 5 columns */
 	gap: 1em; /* Gap between grid items */
 	width: 40%;
-
 }
+
+@media screen and (max-width: 1024px) {
+	.skills-container {
+		width: 100%;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
 
 .skill {
 	display: flex;
