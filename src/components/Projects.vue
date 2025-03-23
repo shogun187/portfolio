@@ -2,7 +2,7 @@
 	<div id="projects-section" v-motion-slide-visible-once-top style="width: 80%; margin: 0 auto">
 		<h2>My Projects</h2>
 		<div class="carousel-container">
-			<vue-carousel v-bind="carouselConfig">
+			<vue-carousel v-bind="carouselConfig" class="carousel">
 				<vue-slide>
 					<div>
 						<Card class="card">
@@ -187,6 +187,10 @@ export default {
 	color: black !important;
 	border: none !important;
 	margin-top: 10px;
+}
+
+.carousel {
+	--vc-nav-color: white;
 }
 
 #projects-section {
