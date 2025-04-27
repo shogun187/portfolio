@@ -17,6 +17,7 @@ export default {
 				if (entry.isIntersecting) {
 					// When a section is intersecting (visible), update activeSection
 					this.activeSection = entry.target.id;
+					console.log('active', this.activeSection)
 				}
 			});
 		}
@@ -77,7 +78,7 @@ export default {
 		// Set up IntersectionObserver options
 		const options = {
 			root: null,       // use the viewport as the container
-			threshold: 0.4,    // adjust this value to determine when a section is "active"
+			threshold: 0.2,    // adjust this value to determine when a section is "active"
 		};
 		// Create the observer and start observing each section
 		const observer = new IntersectionObserver(this.handleIntersections, options);
