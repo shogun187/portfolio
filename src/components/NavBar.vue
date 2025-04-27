@@ -17,7 +17,6 @@ export default {
 				if (entry.isIntersecting) {
 					// When a section is intersecting (visible), update activeSection
 					this.activeSection = entry.target.id;
-					console.log('active', this.activeSection)
 				}
 			});
 		}
